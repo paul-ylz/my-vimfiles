@@ -33,8 +33,10 @@ nnoremap <leader>' viw<esc>a'<esc>hbi'<esc>lel
 nnoremap <leader>v ^v$
 nnoremap <leader>cs :vsplit $HOME/.vim/cheatsheet.txt<cr>
 nnoremap <leader>o O<esc>x
-nnoremap <leader><esc> :noh<cr><esc>
+nnoremap <leader><esc> :nohlsearch<cr><esc>
 nnoremap <leader>fw :%s/\s\+$//<cr>
+nnoremap ;; :%s:::cg<left><left><left><left>
+
 vnoremap <leader>" <esc>`<i"<esc>`>la"<esc>
 vnoremap <leader>' <esc>`<i"<esc>`>la"<esc>
 
