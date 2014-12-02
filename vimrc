@@ -21,16 +21,15 @@ set background=dark
 syntax enable
 filetype plugin indent on
 
+nnoremap <leader>ev :vsplit $MYVIMRC<cr>
+nnoremap <leader>sv :source $MYVIMRC<cr>
 nnoremap H ^
 nnoremap L $
 nnoremap <leader>- ddp
 nnoremap <leader>_ ddkkp
 nnoremap <leader><c-u> viwU<esc>
-nnoremap <leader>ev :vsplit $MYVIMRC<cr>
-nnoremap <leader>sv :source $MYVIMRC<cr>
 nnoremap <leader>" viw<esc>a"<esc>hbi"<esc>lel
 nnoremap <leader>' viw<esc>a'<esc>hbi'<esc>lel
-nnoremap <leader>v ^v$
 nnoremap <leader>cs :vsplit $HOME/.vim/cheatsheet.txt<cr>
 nnoremap <leader>o O<esc>x
 nnoremap <leader><esc> :nohlsearch<cr><esc>
@@ -66,6 +65,6 @@ augroup filetype_markdown
   autocmd FileType markdown onoremap ah :<c-u>execute "normal! ?^[-=]\\{-2,}$\r:nohlsearch\rg_vk0"<cr>
 augroup END
 
-:highlight ExtraWhitespace ctermbg=darkgreen guibg=lightgreen
-:match ExtraWhitespace /\s\+\%#\@<!$/
+highlight ExtraWhitespace ctermbg=darkgreen guibg=lightgreen
+match ExtraWhitespace /\s\+$/
 
