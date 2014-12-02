@@ -1,3 +1,5 @@
+execute pathogen#infect('bundle/{}')
+
 let mapleader = "-"
 let maplocalleader = "\\"
 
