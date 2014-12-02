@@ -58,6 +58,12 @@ augroup filetype_html
   autocmd FileType html nnoremap <buffer> <localleader>f Vatzf
 augroup END
 
+augroup filetype_markdown
+  autocmd!
+  autocmd FileType markdown onoremap ih :<c-u>execute "normal! ?^[-=]\\{-2,}$\r:nohlsearch\rkvg_"<cr>
+  autocmd FileType markdown onoremap ah :<c-u>execute "normal! ?^[-=]\\{-2,}$\r:nohlsearch\rg_vk0"<cr>
+augroup END
+
 :highlight ExtraWhitespace ctermbg=darkgreen guibg=lightgreen
 :match ExtraWhitespace /\s\+\%#\@<!$/
 
