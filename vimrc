@@ -17,6 +17,8 @@ set expandtab
 set shiftwidth=2
 set softtabstop=2
 set background=dark
+set statusline=%<%f\ %h%m%r%=%-14.(%l,%c%V%)
+set statusline+=\ %y\ %P
 
 syntax enable
 filetype plugin indent on
@@ -35,6 +37,8 @@ nnoremap <leader>o O<esc>x
 nnoremap <leader><esc> :nohlsearch<cr><esc>
 nnoremap <leader>fw :%s/\s\+$//<cr>
 nnoremap ;; :%s:::cg<left><left><left><left>
+nnoremap <leader>b a<cr><esc>kg_
+nnoremap <leader>= :Tabularize /=<cr>
 
 vnoremap <leader>" <esc>`<i"<esc>`>la"<esc>
 vnoremap <leader>' <esc>`<i"<esc>`>la"<esc>
