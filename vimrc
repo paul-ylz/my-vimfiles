@@ -37,7 +37,7 @@ nnoremap <leader>o O<esc>x
 nnoremap <leader><esc> :nohlsearch<cr><esc>
 nnoremap <leader>fw :%s/\s\+$//<cr>
 nnoremap ;; :%s:::cg<left><left><left><left>
-nnoremap <leader>b a<cr><esc>kg_
+nnoremap <leader>bb a<cr><esc>kg_
 nnoremap <leader>t= :Tabularize /=<cr>
 nnoremap <leader>ts :Tabularize /:/r0c1l0<cr>
 
