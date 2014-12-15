@@ -70,6 +70,12 @@ augroup filetype_markdown
   autocmd FileType markdown onoremap ah :<c-u>execute "normal! ?^[-=]\\{-2,}$\r:nohlsearch\rg_vk0"<cr>
 augroup END
 
+augroup filetype_text
+  autocmd!
+  autocmd FileType text nnoremap <buffer> <localleader>d 0iDONE <esc>
+  autocmd FileType text nnoremap <buffer> <localleader>c 0/DONE<cr>viwxx
+augroup END
+
 highlight ExtraWhitespace ctermbg=darkgreen guibg=lightgreen
 match ExtraWhitespace /\s\+$/
 
