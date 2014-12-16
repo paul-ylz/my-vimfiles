@@ -37,9 +37,12 @@ nnoremap <leader>o O<esc>x
 nnoremap <leader><esc> :nohlsearch<cr><esc>
 nnoremap <leader>fw :%s/\s\+$//<cr>
 nnoremap ;; :%s:::cg<left><left><left><left>
-nnoremap <leader>b a<cr><esc>kg_
+nnoremap <leader>bb a<cr><esc>==
+nnoremap <leader>b, f,a<cr><esc>==
 nnoremap <leader>t= :Tabularize /=<cr>
-nnoremap <leader>ts :Tabularize /:/r0c1l0<cr>
+nnoremap <leader>t: :Tabularize /:/r0c1l0<cr>
+nnoremap <leader>t{ :Tabularize /{<cr>
+nnoremap <leader>a ggVG
 
 vnoremap <leader>" <esc>`<i"<esc>`>la"<esc>
 vnoremap <leader>' <esc>`<i"<esc>`>la"<esc>
@@ -48,8 +51,9 @@ inoremap <leader><c-u> <esc>viwU
 inoremap jk <esc>
 inoremap <esc> <nop>
 
-onoremap in( :<c-u>normal! f(vi(<cr>
 onoremap il( :<c-u>normal! F)vi(<cr>
+onoremap in( :<c-u>normal! f(vi(<cr>
+onoremap in{ :<c-u>normal! f{vi{<cr>
 onoremap in' :<c-u>normal! f'vi'<cr>
 onoremap in" :<c-u>normal! f"vi"<cr>
 
