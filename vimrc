@@ -37,12 +37,8 @@ nnoremap <leader>o O<esc>x
 nnoremap <leader><esc> :nohlsearch<cr><esc>
 nnoremap <leader>fw :%s/\s\+$//<cr>
 nnoremap ;; :%s:::cg<left><left><left><left>
-<<<<<<< HEAD
-nnoremap <leader>bb a<cr><esc>==
 nnoremap <leader>b, f,a<cr><esc>==
-=======
 nnoremap <leader>bb a<cr><esc>kg_
->>>>>>> origin/master
 nnoremap <leader>t= :Tabularize /=<cr>
 nnoremap <leader>t: :Tabularize /:/r0c1l0<cr>
 nnoremap <leader>t{ :Tabularize /{<cr>
