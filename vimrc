@@ -43,6 +43,7 @@ nnoremap <leader>t= :Tabularize /=<cr>
 nnoremap <leader>t: :Tabularize /:/r0c1l0<cr>
 nnoremap <leader>t{ :Tabularize /{<cr>
 nnoremap <leader>a ggVG
+nnoremap <leader>rs :!touch tmp/restart.txt
 
 vnoremap <leader>" <esc>`<i"<esc>`>la"<esc>
 vnoremap <leader>' <esc>`<i"<esc>`>la"<esc>
@@ -57,10 +58,13 @@ onoremap in{ :<c-u>normal! f{vi{<cr>
 onoremap in' :<c-u>normal! f'vi'<cr>
 onoremap in" :<c-u>normal! f"vi"<cr>
 
+au BufNewFile,BufRead *.rabl set filetype=ruby
+
 augroup filetype_ruby
   autocmd!
   autocmd FileType ruby nnoremap <buffer> <localleader>c I#<space><esc>
   autocmd FileType ruby inoremap <buffer> <localleader>c <home>#<space><end>
+  autocmd FileType ruby nnoremap <buffer> <localleader>rt :!bundle exec rake test<cr>
 augroup END
 
 augroup filetype_html
