@@ -65,6 +65,7 @@ augroup filetype_ruby
   autocmd FileType ruby nnoremap <buffer> <localleader>c I#<space><esc>
   autocmd FileType ruby inoremap <buffer> <localleader>c <home>#<space><end>
   autocmd FileType ruby nnoremap <buffer> <localleader>rt :!bundle exec rake test<cr>
+  autocmd FileType ruby nnoremap <buffer> <localleader>ro :!bundle exec rake test TEST=%<cr>
 augroup END
 
 augroup filetype_html
@@ -76,6 +77,7 @@ augroup filetype_markdown
   autocmd!
   autocmd FileType markdown onoremap ih :<c-u>execute "normal! ?^[-=]\\{-2,}$\r:nohlsearch\rkvg_"<cr>
   autocmd FileType markdown onoremap ah :<c-u>execute "normal! ?^[-=]\\{-2,}$\r:nohlsearch\rg_vk0"<cr>
+  autocmd FileType markdown nnoremap <buffer> <localleader>v :!open -a Google\ Chrome %<cr>
 augroup END
 
 augroup filetype_text
