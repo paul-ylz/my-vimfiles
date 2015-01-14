@@ -38,6 +38,9 @@ nnoremap <leader><esc> :nohlsearch<cr><esc>
 nnoremap <leader>fw :%s/\s\+$//<cr>
 nnoremap ;; :%s:::cg<left><left><left><left>
 nnoremap <leader>b, f,a<cr><esc>==
+nnoremap <leader>bb} f}ha<cr><esc>==
+nnoremap <leader>b[ f[a<cr><esc>==
+nnoremap <leader>b{ f{a<cr><esc>==
 nnoremap <leader>bb a<cr><esc>kg_
 nnoremap <leader>t= :Tabularize /=<cr>
 nnoremap <leader>t: :Tabularize /:/r0c1l0<cr>
@@ -66,6 +69,7 @@ augroup filetype_ruby
   autocmd FileType ruby inoremap <buffer> <localleader>c <home>#<space><end>
   autocmd FileType ruby nnoremap <buffer> <localleader>rt :!bundle exec rake test<cr>
   autocmd FileType ruby nnoremap <buffer> <localleader>ro :!bundle exec rake test TEST=%<cr>
+  autocmd FileType ruby nnoremap <buffer> <localleader>rr :!ruby %<cr>
 augroup END
 
 augroup filetype_html
