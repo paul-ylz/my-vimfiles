@@ -8,3 +8,4 @@ git clone https://github.com/honza/vim-snippets.git ./vim-snippets
 git clone https://github.com/godlygeek/tabular.git ./tabular
 git clone https://github.com/tpope/vim-surround.git ./vim-surround
 git clone https://github.com/kien/ctrlp.vim.git ./ctrlp.vim
+git clone https://github.com/slim-template/vim-slim.git
