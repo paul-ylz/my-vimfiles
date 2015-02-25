@@ -63,6 +63,8 @@ onoremap in{ :<c-u>normal! f{vi{<cr>
 onoremap in' :<c-u>normal! f'vi'<cr>
 onoremap in" :<c-u>normal! f"vi"<cr>
 
+iabbrev pjpp puts JSON.pretty_generate(JSON.parse(response.body))
+
 au BufNewFile,BufRead *.rabl set filetype=ruby
 
 augroup filetype_ruby
