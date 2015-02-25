@@ -23,6 +23,8 @@ set statusline+=\ %y\ %P
 syntax enable
 filetype plugin indent on
 
+iabbrev pjpp puts JSON.pretty_generate(JSON.parse(response.body))
+
 nnoremap <leader>ev :vsplit $MYVIMRC<cr>
 nnoremap <leader>sv :source $MYVIMRC<cr>
 nnoremap H ^
