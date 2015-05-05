@@ -2,6 +2,9 @@ execute pathogen#infect('bundle/{}')
 
 let mapleader = "-"
 let maplocalleader = "\\"
+let g:molokai_original = 1
+let g:rehash256 = 1
+let g:go_def_mapping_enabled = 0
 
 set dir=$HOME/.vim/swapfiles
 set number
@@ -93,6 +96,13 @@ augroup filetype_text
   autocmd FileType text nnoremap <buffer> <localleader>d 0iDONE <esc>
   autocmd FileType text nnoremap <buffer> <localleader>c 0/DONE<cr>viwxx
 augroup END
+
+augroup filetype_go
+  autocmd!
+  autocmd FileType go nnoremap <buffer> <localleader>c 0i// <esc>
+  autocmd FileType go nmap <buffer> <localleader>gd <Plug>(go-def-vertical)
+augroup END
+
 
 highlight ExtraWhitespace ctermbg=darkgreen guibg=lightgreen
 match ExtraWhitespace /\s\+$/
