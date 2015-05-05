@@ -77,6 +77,7 @@ augroup filetype_ruby
   autocmd FileType ruby nnoremap <buffer> <localleader>rt :!bundle exec rake test<cr>
   autocmd FileType ruby nnoremap <buffer> <localleader>ro :!bundle exec rake test TEST=%<cr>
   autocmd FileType ruby nnoremap <buffer> <localleader>rr :!ruby %<cr>
+  autocmd FileType ruby nnoremap <buffer> <localleader>rb :call VimuxRunCommand("clear; ruby " . bufname("%"))<cr>
 augroup END
 
 augroup filetype_html
