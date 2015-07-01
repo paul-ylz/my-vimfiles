@@ -103,7 +103,6 @@ augroup filetype_go
   autocmd FileType go nmap <buffer> <localleader>gd <Plug>(go-def-vertical)
 augroup END
 
-
 highlight ExtraWhitespace ctermbg=darkgreen guibg=lightgreen
 match ExtraWhitespace /\s\+$/
 
