@@ -1,0 +1,16 @@
+alias eb="vim ~/.bashrc"
+alias sb="source ~/.bashrc"
+
+alias tls="tmux ls"
+alias tn="tmux new"
+alias ta="tmux attach"
+
+alias gst="git status"
+alias ga="git add"
+alias gdc="git diff --cached"
+alias gcmsg="git commit -m"
+alias gp="git push"
+alias gf="git fetch"
+alias gm="git merge"
+alias tel="tail -f /opt/nginx/logs/error.log"
+alias lel="less /opt/nginx/logs/error.log"
