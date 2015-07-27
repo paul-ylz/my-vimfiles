@@ -16,5 +16,7 @@ alias gm="git merge"
 alias tel="tail -f /opt/nginx/logs/error.log"
 alias lel="less /opt/nginx/logs/error.log"
 
+alias be="bundle exec"
+
 export VISUAL=vim
 export EDITOR="$VISUAL"
