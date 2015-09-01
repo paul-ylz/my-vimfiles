@@ -14,6 +14,8 @@ alias gf="git fetch"
 alias gm="git merge"
 alias tel="tail -f /opt/nginx/logs/error.log"
 alias lel="less /opt/nginx/logs/error.log"
+alias scl="sudo crontab -l"
+alias sce="sudo crontab -e"
 
 export VISUAL=vim
 export EDITOR="$VISUAL"
