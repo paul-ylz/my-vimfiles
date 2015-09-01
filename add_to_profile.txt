@@ -5,6 +5,7 @@ alias tls="tmux ls"
 alias tn="tmux new"
 alias ta="tmux attach"
 
+alias gb="git branch"
 alias gst="git status"
 alias ga="git add"
 alias gdc="git diff --cached"
@@ -16,6 +17,8 @@ alias tel="tail -f /opt/nginx/logs/error.log"
 alias lel="less /opt/nginx/logs/error.log"
 alias scl="sudo crontab -l"
 alias sce="sudo crontab -e"
+
+alias be="bundle exec"
 
 export VISUAL=vim
 export EDITOR="$VISUAL"

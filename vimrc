@@ -5,6 +5,7 @@ let maplocalleader = "\\"
 let g:molokai_original = 1
 let g:rehash256 = 1
 let g:go_def_mapping_enabled = 0
+let g:ctrlp_working_path_mode = 0
 
 set dir=$HOME/.vim/swapfiles
 set number
