@@ -2,6 +2,7 @@
 alias eb="vim ~/.bashrc"
 alias sb="source ~/.bashrc"
 alias lt="ls -rtal"
+alias lls="ls -lSr"
 
 # tmux
 alias tls="tmux ls"
