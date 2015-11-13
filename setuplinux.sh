@@ -4,6 +4,6 @@ cd bundle
 cd ..
 ln -s `pwd`/linux.tmux.conf ../.tmux.conf
 ln -s `pwd`/vimrc ../.vimrc
-cat add_to_profile.txt >> ../.vimrc
+cat add_to_profile.txt >> ../.bashrc
 cd ~
 ls -alF
