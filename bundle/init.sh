@@ -11,3 +11,4 @@ git clone https://github.com/kien/ctrlp.vim.git ./ctrlp.vim
 git clone https://github.com/slim-template/vim-slim.git
 git clone https://github.com/fatih/vim-go.git ./vim-go
 git clone https://github.com/benmills/vimux.git ./vimux
+git clone https://github.com/tmhedberg/matchit.git ./matchit
