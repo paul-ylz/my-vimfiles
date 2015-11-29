@@ -5,12 +5,12 @@ snippet react
 		<head>
 			<meta charset="utf-8">
 			<meta name="viewport" content="width=device-width">
-			<title>${1:`substitute(vim_snippets#Filename('', 'Page Title'), '^.', '\u&', '')`}</title>
-			${2:link}
+			<title>$1</title>
+			<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
 		</head>
 		<body>
 		  <div id="app"></div>
 		  <script src="bundle.js"></script>
-			${0:body}
+		  Hello world
 		</body>
 	</html>

@@ -21,11 +21,13 @@ set wrap
 set expandtab
 set shiftwidth=2
 set softtabstop=2
-set background=dark
 set statusline=%<%f\ %h%m%r%=%-14.(%l,%c%V%)
 set statusline+=\ %y\ %P
 
+set background=dark
 syntax enable
+colorscheme molokai
+
 filetype plugin indent on
 
 iabbrev pjpp puts JSON.pretty_generate(JSON.parse(response.body))
