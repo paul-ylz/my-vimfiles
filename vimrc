@@ -111,3 +111,6 @@ augroup END
 highlight ExtraWhitespace ctermbg=darkgreen guibg=lightgreen
 match ExtraWhitespace /\s\+$/
 
+highlight Normal ctermbg=Black
+
+
