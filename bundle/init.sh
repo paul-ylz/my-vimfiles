@@ -12,3 +12,5 @@ git clone https://github.com/slim-template/vim-slim.git
 git clone https://github.com/fatih/vim-go.git ./vim-go
 git clone https://github.com/benmills/vimux.git ./vimux
 git clone https://github.com/tmhedberg/matchit.git ./matchit
+git clone https://github.com/pangloss/vim-javascript.git
+git clone https://github.com/mxw/vim-jsx.git
