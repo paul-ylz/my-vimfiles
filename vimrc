@@ -35,6 +35,7 @@ iabbrev pjpp puts JSON.pretty_generate(JSON.parse(response.body))
 
 nnoremap <leader>ev :vsplit $MYVIMRC<cr>
 nnoremap <leader>sv :source $MYVIMRC<cr>
+nnoremap <leader>es :echo &filetype<cr>
 nnoremap H ^
 nnoremap L $
 nnoremap <leader>- ddp
@@ -113,4 +114,4 @@ match ExtraWhitespace /\s\+$/
 
 highlight Normal ctermbg=Black
 
-
+command! E Lexplore

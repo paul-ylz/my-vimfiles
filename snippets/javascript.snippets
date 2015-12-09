@@ -44,24 +44,36 @@ snippet gis
 	},
 snippet ism
 	isMounted()
-snippet jsx
-	var React = require('react');
+snippet react
+	import React from 'react';
 
-	var ${1:ClassName} = React.createClass({
+	class ${1:ClassName} extends React.Component {
 
-		render: function() {
+		render() {
 			return (
 				${0:<div />}
-			);
+			)
 		}
+	}
 
-	});
+	export default $1
+snippet reactn
+	import React from 'react-native';
 
-	module.exports = $1;
+	class ${1:ClassName} extends React.Component {
+
+		render() {
+			return (
+				${0:<View />}
+			)
+		}
+	}
+
+	export default $1
 snippet pt
-	propTypes: {
+	propTypes = {
 		${1}: React.PropTypes.${2:string}
-	},
+	};
 snippet rcc
 	var ${1:ClassName} = React.createClass({
 
@@ -105,3 +117,23 @@ snippet img
 	<img src=${1} />
 snippet ahref
 	<a href=${1}>${0}</a>
+snippet Text
+	<Text${1}>${2}</Text>${0}
+snippet View
+	<View${1}>${2}</View>${0}
+snippet Image
+	<Image source=${1} />${0}
+snippet ListView
+	<ListView${1}/>${0}
+snippet styles
+	var styles = StyleSheet.create({
+		${1}
+	});${0}
+snippet aii
+	<ActivityIndicatorIOS
+	  ${1}
+	>${2}</ActivityIndicatorIOS>${0}
+snippet thl
+	<TouchableHighlight${1}>${2}</TouchableHighlight>${0}
+snippet ScrollView
+	<ScrollView${1}>${2}</ScrollView>${0}
