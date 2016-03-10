@@ -75,6 +75,8 @@ onoremap in" :<c-u>normal! f"vi"<cr>
 iabbrev pjpp puts JSON.pretty_generate(JSON.parse(response.body))
 
 au BufNewFile,BufRead *.rabl set filetype=ruby
+au BufNewFile,BufRead *.ru set filetype=ruby
+au BufNewFile,BufRead *.rake set filetype=ruby
 
 augroup filetype_ruby
   autocmd!
@@ -114,4 +116,3 @@ match ExtraWhitespace /\s\+$/
 
 highlight Normal ctermbg=Black
 
-command! E Lexplore
