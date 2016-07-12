@@ -114,4 +114,4 @@ match ExtraWhitespace /\s\+$/
 
 highlight Normal ctermbg=Black
 
-command! E Lexplore
+command! E Vexplore

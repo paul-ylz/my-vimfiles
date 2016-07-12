@@ -45,18 +45,61 @@ snippet gis
 snippet ism
 	isMounted()
 snippet react
-	import React from 'react';
+	import React, { Component } from 'react';
 
-	class ${1:ClassName} extends React.Component {
+	class ${1:ClassName} extends Component {
 
 		render() {
 			return (
-				${0:<div />}
+				<div>${0}</div>
 			)
 		}
 	}
 
-	export default $1
+	export default $1;
+snippet modal
+	import React, { Component } from 'react';
+	import Modal from 'react-bootstrap-modal';
+	import { connect } from 'react-redux';
+	import { ${2:toggleAction} } from '../../actions/modal';
+
+	class ${1:ClassName} extends Component {
+
+	render() {
+		return (
+		<Modal className='show'
+			show={this.props.${3:displayAttr}}
+		    onHide={this.props.$2}>
+			<Modal.Header closeButton>
+			<Modal.Title>
+			Modal Title
+			</Modal.Title>
+			</Modal.Header>
+
+			<Modal.Body>
+			Modal Body
+			</Modal.Body>
+
+			<Modal.Footer>
+			<Modal.Dismiss className='btn btn-default'>Cancel</Modal.Dismiss>
+			<button
+			className='btn btn-default btn-primary'
+			type='submit'>
+			Save
+			</button>
+			</Modal.Footer>
+		</Modal>
+		)
+	}
+	}
+
+	function mapStateToProps(state) {
+	  return ({ $3: state.modals.$3 })
+	}
+
+	export default connect(
+	  mapStateToProps, { $2 }
+	)($1);
 snippet reactn
 	import React from 'react-native';
 
@@ -70,6 +113,7 @@ snippet reactn
 	}
 
 	export default $1
+
 snippet pt
 	propTypes = {
 		${1}: React.PropTypes.${2:string}
