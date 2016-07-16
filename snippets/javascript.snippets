@@ -1,3 +1,60 @@
+snippet expfn
+	export function ${1:functionName}(${2:arg}) {
+	}
+snippet retfn
+	return function(${1:arg}) {
+	}
+snippet reactfn
+	import React from 'react';
+
+	export default function ${1:FunctionName}(props) {
+	  return (
+		${2:jsx}
+	  )
+	}
+snippet p
+	<p>${1:contents}</p>
+snippet Link
+	<Link to=${1:LinkDest}>${2:LinkLabel}</Link>
+snippet implink
+	import { Link } from 'react-router';
+snippet h5
+	<h5>${1:contents}</h5>
+snippet button
+	<button
+	  className='btn btn-default'
+	  onClick={ this.props.onClick }>
+	  ${1:buttonText}
+	</button>
+snippet form
+	<form>
+	</form>
+snippet strftime
+	strftime('%-d %b, %l:%M %p', new Date(${1:timestring}))
+snippet .form-group
+	<div className='form-group'>
+	</div>
+snippet textarea
+	<textarea className='form-control'/>
+snippet glyph
+	<span className='glyphicon glyphicon-${1:glyphName}'></span>
+snippet span
+	<span className='${1:class}'>${0}</span>
+snippet input
+	<input
+	  {...${1:field}}
+	  type='${2:type}'
+	  className='form-control'/>
+snippet .help-block
+	<div className='help-block'>
+	  { ${1:fieldName}.touched ? $1.error : '' }
+	</div>
+snippet label
+	<label>
+	</label>
+snippet .checkbox
+	<div className='checkbox'>
+	</div>
 snippet cs
 	var cx = React.addons.classSet;
 snippet cdm
@@ -57,19 +114,19 @@ snippet react
 	}
 
 	export default $1;
-snippet modal
+snippet bootstrap-modal
 	import React, { Component } from 'react';
 	import Modal from 'react-bootstrap-modal';
-	import { connect } from 'react-redux';
-	import { ${2:toggleAction} } from '../../actions/modal';
 
 	class ${1:ClassName} extends Component {
 
 	render() {
+		const { show, onHide } = this.props;
 		return (
-		<Modal className='show'
-			show={this.props.${3:displayAttr}}
-		    onHide={this.props.$2}>
+		<Modal
+			className='show'
+			show={show}
+		    onHide={onHide}>
 			<Modal.Header closeButton>
 			<Modal.Title>
 			Modal Title
@@ -93,13 +150,7 @@ snippet modal
 	}
 	}
 
-	function mapStateToProps(state) {
-	  return ({ $3: state.modals.$3 })
-	}
-
-	export default connect(
-	  mapStateToProps, { $2 }
-	)($1);
+	export default $1;
 snippet reactn
 	import React from 'react-native';
 
@@ -113,6 +164,52 @@ snippet reactn
 	}
 
 	export default $1
+snippet redux
+	import { connect } from 'react-redux';
+snippet connect
+	export default connect(
+	  mapStateToProps,
+	  {}
+	)(${1:ClassName});
+snippet redux-form
+	import React, { Component } from 'react';
+	import { reduxForm } from 'redux-form';
+	import { } from '../../actions';
+
+	class ${1:ClassName} extends Component {
+
+		render() {
+			const { fields: { }, handleSubmit } = this.props;
+
+			return (
+			<form
+			id='${1:formId}'
+			onSubmit={handleSubmit(this.onSubmit.bind(this))}>
+			</form>
+			)
+		}
+
+		onSubmit(props) {
+		}
+	}
+
+	function validate(values) {
+		const errors = {};
+
+		return errors;
+	}
+
+	function mapStateToProps(state) {
+		return {
+			initialValues: null
+		};
+	}
+
+	export default reduxForm({
+		form: '$1',
+		fields: [],
+		validate
+	}, mapStateToProps, { })($1);
 
 snippet pt
 	propTypes = {
@@ -144,6 +241,10 @@ snippet scu
 	},
 snippet props
 	this.props.${1}
+snippet mapS
+	function mapStateToProps(state) {
+	  return {$1};
+	}
 snippet state
 	this.state.${1}
 snippet trp
