@@ -1,3 +1,15 @@
+snippet option
+	<option value=${1:val}>${2:label}</option>
+snippet select
+	<select className='form-control'>${1:content}</select>
+snippet h4
+	<h4>${1:item}</h4>
+snippet li
+	<li>${1:linkContent}</li>
+snippet div
+	<div className='${1:class}'>${2:content}</div>
+snippet td
+	<td>${1:content}</td>
 snippet expfn
 	export function ${1:functionName}(${2:arg}) {
 	}
@@ -5,19 +17,21 @@ snippet retfn
 	return function(${1:arg}) {
 	}
 snippet reactfn
-	import React from 'react';
+	import React from 'react'
 
-	export default function ${1:FunctionName}(props) {
+	const ${1:ComponentName} = ${2:props} => {
 	  return (
-		${2:jsx}
+		${2:<div></div>}
 	  )
 	}
+
+	export default $1
 snippet p
 	<p>${1:contents}</p>
 snippet Link
 	<Link to=${1:LinkDest}>${2:LinkLabel}</Link>
 snippet implink
-	import { Link } from 'react-router';
+	import { Link } from 'react-router'
 snippet h5
 	<h5>${1:contents}</h5>
 snippet button
@@ -37,7 +51,7 @@ snippet .form-group
 snippet textarea
 	<textarea className='form-control'/>
 snippet glyph
-	<span className='glyphicon glyphicon-${1:glyphName}'></span>
+	<span className='glyphicon glyphicon-${1:glyphName}'/>
 snippet span
 	<span className='${1:class}'>${0}</span>
 snippet input
@@ -102,7 +116,7 @@ snippet gis
 snippet ism
 	isMounted()
 snippet react
-	import React, { Component } from 'react';
+	import React, { Component } from 'react'
 
 	class ${1:ClassName} extends Component {
 
@@ -113,7 +127,7 @@ snippet react
 		}
 	}
 
-	export default $1;
+	export default $1
 snippet bootstrap-modal
 	import React, { Component } from 'react';
 	import Modal from 'react-bootstrap-modal';
@@ -165,12 +179,12 @@ snippet reactn
 
 	export default $1
 snippet redux
-	import { connect } from 'react-redux';
+	import { connect } from 'react-redux'
 snippet connect
 	export default connect(
 	  mapStateToProps,
 	  {}
-	)(${1:ClassName});
+	)(${1:ClassName})
 snippet redux-form
 	import React, { Component } from 'react';
 	import { reduxForm } from 'redux-form';
@@ -183,7 +197,7 @@ snippet redux-form
 
 			return (
 			<form
-			id='${1:formId}'
+			id='${2:formId}'
 			onSubmit={handleSubmit(this.onSubmit.bind(this))}>
 			</form>
 			)
@@ -202,7 +216,7 @@ snippet redux-form
 	function mapStateToProps(state) {
 		return {
 			initialValues: null
-		};
+		}
 	}
 
 	export default reduxForm({
@@ -243,15 +257,13 @@ snippet props
 	this.props.${1}
 snippet mapS
 	function mapStateToProps(state) {
-	  return {$1};
+	  return {$1}
 	}
 snippet state
 	this.state.${1}
 snippet trp
 	transferPropsTo(${1});
 // this is for jsx html
-snippet div
-	<div>${1}</div>
 snippet h3
 	<h3>${1}</h3>
 snippet ul.
