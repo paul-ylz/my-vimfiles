@@ -32,6 +32,8 @@ snippet Link
 	<Link to=${1:LinkDest}>${2:LinkLabel}</Link>
 snippet implink
 	import { Link } from 'react-router'
+snippet impform
+	import { reduxForm } from 'redux-form'
 snippet h5
 	<h5>${1:contents}</h5>
 snippet button
@@ -186,31 +188,9 @@ snippet connect
 	  {}
 	)(${1:ClassName})
 snippet redux-form
-	import React, { Component } from 'react';
-	import { reduxForm } from 'redux-form';
-	import { } from '../../actions';
-
-	class ${1:ClassName} extends Component {
-
-		render() {
-			const { fields: { }, handleSubmit } = this.props;
-
-			return (
-			<form
-			id='${2:formId}'
-			onSubmit={handleSubmit(this.onSubmit.bind(this))}>
-			</form>
-			)
-		}
-
-		onSubmit(props) {
-		}
-	}
-
 	function validate(values) {
-		const errors = {};
-
-		return errors;
+		const errors = {}
+		return errors
 	}
 
 	function mapStateToProps(state) {
@@ -223,7 +203,7 @@ snippet redux-form
 		form: '$1',
 		fields: [],
 		validate
-	}, mapStateToProps, { })($1);
+	}, mapStateToProps, { })($1)
 
 snippet pt
 	propTypes = {
