@@ -116,4 +116,4 @@ match ExtraWhitespace /\s\+$/
 
 highlight Normal ctermbg=Black
 
-command! E Vexplore
+command! E NERDTree

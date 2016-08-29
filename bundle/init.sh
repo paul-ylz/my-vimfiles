@@ -14,3 +14,5 @@ git clone https://github.com/benmills/vimux.git ./vimux
 git clone https://github.com/tmhedberg/matchit.git ./matchit
 git clone https://github.com/pangloss/vim-javascript.git
 git clone https://github.com/mxw/vim-jsx.git
+git clone https://github.com/scrooloose/nerdtree.git
+git clone https://github.com/vim-ruby/vim-ruby.git
