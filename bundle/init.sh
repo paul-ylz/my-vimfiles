@@ -16,3 +16,4 @@ git clone https://github.com/pangloss/vim-javascript.git
 git clone https://github.com/mxw/vim-jsx.git
 git clone https://github.com/scrooloose/nerdtree.git
 git clone https://github.com/vim-ruby/vim-ruby.git
+git clone https://github.com/kchmck/vim-coffee-script.git
